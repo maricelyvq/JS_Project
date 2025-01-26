@@ -33,7 +33,7 @@ function addTodo(){
 /**
  * Finds the index of a todo item by its title.
  * return : The index of the todo item, or -1 if not found.
- */
+ */6
 function findTodo(){
   let title = prompt('title: ');
   return (todos.findIndex(item => item.title === title));
@@ -44,9 +44,9 @@ function findTodo(){
  * */
 function showTodo (index) {
    if(index !== -1){
-    console.log(`${index + 1}. ${todos[index].title}`);
-    console.log(`   ${todos[index].description}`);
-    console.log(todos[index].complete ? '   complete' : '   incomplete');
+    console.log(`${index + 1}. Title: ${todos[index].title}`);
+    console.log(`   Description: ${todos[index].description}`);
+    console.log(todos[index].complete ? '   Status: complete' : '   Status:incomplete');
   } else {
     console.log('\n***Todo not found***');
   }
@@ -156,7 +156,7 @@ function displayTodoLength(){
   console.log("\nYou have " + todos.length + " todos");
 }
 
-function app(){
+const app = () => {
   titleCase("| Main Menu |");
   console.log('1. Add a new todo');
   console.log('2. Show all todos'); 
